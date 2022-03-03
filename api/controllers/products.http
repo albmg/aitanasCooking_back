@@ -1,0 +1,9 @@
+@base_url = http://localhost:3000/api/products
+
+###
+// view all products
+GET {{base_url}}/ HTTP/1.1
+
+###
+// get a product
+GET {{base_url}}/6220e9bed35877c20787b90f HTTP/1.1

@@ -7,6 +7,6 @@ const {
 
 router
   .get('/', viewAllProducts)
-
+  .get('/:productId', getProduct)
 
 module.exports = router

@@ -16,6 +16,15 @@ function getProduct (req, res) {
     .catch(err => console.error(err))
 }
 
+function createProduct (req, res) {
+  ProductModel
+    .create(req.body)
+    .then( product => {
+      res.json( product )
+    })
+    .catch(err => { console.error(err)})
+}
+
 module.exports = {
   viewAllProducts,
   getProduct
