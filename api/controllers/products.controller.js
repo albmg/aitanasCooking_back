@@ -27,5 +27,6 @@ function createProduct (req, res) {
 
 module.exports = {
   viewAllProducts,
-  getProduct
+  getProduct,
+  createProduct
 }

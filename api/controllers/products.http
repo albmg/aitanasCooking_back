@@ -7,3 +7,17 @@ GET {{base_url}}/ HTTP/1.1
 ###
 // get a product
 GET {{base_url}}/6220e9bed35877c20787b90f HTTP/1.1
+
+
+###
+// create a new product
+POST {{base_url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "creando desde la terminal",
+  "image": "esta-de-aqui",
+  "description": "tal cual",
+  "ingredients": ["gofio", "azúcar", "mantequilla"],
+  "createdDate": ""
+}
