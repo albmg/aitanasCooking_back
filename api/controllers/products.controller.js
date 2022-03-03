@@ -16,3 +16,7 @@ function getProduct (req, res) {
     .catch(err => console.error(err))
 }
 
+module.exports = {
+  viewAllProducts,
+  getProduct
+}
