@@ -7,3 +7,6 @@ const {
 
 router
   .get('/', viewAllProducts)
+
+
+module.exports = router
