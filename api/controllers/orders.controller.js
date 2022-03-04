@@ -29,6 +29,7 @@ function createOrder (req, res) {
       .catch(err => { console.error(err)})
 }
 
+
 function updateOrder (req, res) {
   OrderModel
     .updateOne({ _id: req.params.orderId }, req.body, {new: true})
@@ -36,9 +37,18 @@ function updateOrder (req, res) {
     .catch(err => console.error(err))
 }
 
+function deleteOrder (req, res) {
+  OrderModel
+    .deleteOne({ _id: req.params.orderId})
+    .then(response => { res.json(response)})
+    .catch(err => console.error(err))
+}
+
+
 module.exports = {
   viewAllOrders,
   getOrder,
   createOrder,
-  updateOrder
+  updateOrder,
+  deleteOrder
 }

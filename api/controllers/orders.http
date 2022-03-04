@@ -31,3 +31,8 @@ Content-Type: application/json
 {
   "adress" : "actualizando direccion"
 }
+
+###
+// delete order
+DELETE {{base_url}}/6222334c8bdef835a06b3cc0 HTTP/1.1
+
