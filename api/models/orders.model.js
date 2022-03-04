@@ -15,11 +15,11 @@ const orderSchema = new mongoose.Schema({
   },
   purchasedProducts: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "product"
+    ref: 'product'
   },
-  puerchasedMenus: {
+  purchasedMenus: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "menu"
+    ref: 'menu'
   }
 })
 
