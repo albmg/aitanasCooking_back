@@ -1,5 +1,6 @@
 const ProductModel = require('../models/products.model')
 const mongoose = require('mongoose')
+const { findByIdAndRemove } = require('../models/products.model')
 
 
 function viewAllProducts (req, res) {
@@ -27,9 +28,15 @@ function createProduct (req, res) {
 
 function updateProduct (req, res) {
   ProductModel
-
     .updateOne({ _id: req.params.productId }, req.body, {new: true})
     .then(product => res.json(product))
+    .catch(err => console.error(err))
+}
+
+function deleteProduct (req, res) {
+  ProductModel
+    .deleteOne({ _id: req.params.productId})
+    .then(response => { res.json(response)})
     .catch(err => console.error(err))
 }
 
@@ -37,5 +44,6 @@ module.exports = {
   viewAllProducts,
   getProduct,
   createProduct,
-  updateProduct
+  updateProduct,
+  deleteProduct
 }

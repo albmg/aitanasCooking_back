@@ -31,3 +31,7 @@ Content-Type: application/json
   "name": "ahora soy otro mas",
   "ingredients": ["curcuma", "pollo"]
 }
+
+###
+// delete product
+DELETE {{base_url}}/6220ece2d35877c20787b910 HTTP/1.1
