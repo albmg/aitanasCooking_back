@@ -1,5 +1,4 @@
 const OrderModel = require('../models/orders.model')
-//const ProductModel = require('../models/products.model')
 const mongoose = require('mongoose')
 
 function viewAllOrders (req, res) {
@@ -11,6 +10,16 @@ function viewAllOrders (req, res) {
     .catch(err => console.error(err))
 }
 
+function getOrder (req, res) {
+  OrderModel
+    .findById(req.params.orderId)
+    .populate('purchasedProducts')
+    .populate('purchasedMenus')
+    .then(response => res.json(response))
+    .catch(err => console.error(err))
+}
+
 module.exports = {
-  viewAllOrders
+  viewAllOrders,
+  getOrder
 }

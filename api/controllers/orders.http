@@ -3,3 +3,8 @@
 ###
 // view all orders
 GET {{base_url}}/ HTTP/1.1
+
+
+###
+// get order
+GET {{base_url}}/62222447fac3734734039804 HTTP/1.1
