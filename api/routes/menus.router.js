@@ -4,7 +4,8 @@ const {
   viewAllMenus,
   getMenu,
   createMenu,
-  updateMenu
+  updateMenu,
+  deleteMenu
 } = require('../controllers/menus.controller')
 
 router
@@ -12,5 +13,6 @@ router
   .get('/:menuId', getMenu)
   .post('/', createMenu)
   .put('/:menuId', updateMenu)
+  .delete('/:menuId', deleteMenu)
 
   module.exports = router

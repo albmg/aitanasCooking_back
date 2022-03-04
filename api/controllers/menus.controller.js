@@ -31,9 +31,17 @@ function updateMenu (req, res) {
   .catch(err => console.error(err))
 }
 
+function deleteMenu (req, res) {
+  MenuModel
+    .deleteOne({ _id: req.params.menuId})
+    .then(response => { res.json(response)})
+    .catch(err => console.error(err))
+}
+
 module.exports = {
   viewAllMenus,
   getMenu,
   createMenu,
-  updateMenu
+  updateMenu,
+  deleteMenu
 }

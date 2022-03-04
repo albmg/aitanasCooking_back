@@ -38,3 +38,7 @@ Content-Type: application/json
   "diners": 2,
   "dishes": ["tomate"]
 }
+
+###
+// delete menu
+DELETE {{base_url}}/6222182fc0a522b2ade4bd81 HTTP/1.1
