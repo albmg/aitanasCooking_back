@@ -6,7 +6,7 @@ const menuSchema = new mongoose.Schema({
   },
   number: {
     type: Number
-  }
+  },
   image: {
     type: String
   },

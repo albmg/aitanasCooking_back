@@ -1,6 +1,5 @@
 const ProductModel = require('../models/products.model')
 const mongoose = require('mongoose')
-const { findByIdAndRemove } = require('../models/products.model')
 
 
 function viewAllProducts (req, res) {
