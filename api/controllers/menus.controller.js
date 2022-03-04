@@ -15,7 +15,17 @@ function getMenu (req, res) {
     .catch(err => console.error(err))
 }
 
+function createMenu (req, res) {
+  MenuModel
+    .create(req.body)
+    .then( menu => {
+      res.json( menu )
+    })
+    .catch(err => { console.error(err)})
+}
+
 module.exports = {
   viewAllMenus,
-  getMenu
+  getMenu,
+  createMenu
 }
