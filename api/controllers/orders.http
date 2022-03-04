@@ -1,0 +1,5 @@
+@base_url = http://localhost:3000/api/orders
+
+###
+// view all orders
+GET {{base_url}}/ HTTP/1.1
