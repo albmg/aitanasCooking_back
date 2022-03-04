@@ -19,7 +19,18 @@ function getOrder (req, res) {
     .catch(err => console.error(err))
 }
 
+
+function createOrder (req, res) {
+    OrderModel
+      .create(req.body)
+      .then( order => {
+        res.json( order )
+      })
+      .catch(err => { console.error(err)})
+}
+
 module.exports = {
   viewAllOrders,
-  getOrder
+  getOrder,
+  createOrder
 }
