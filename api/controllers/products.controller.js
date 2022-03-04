@@ -25,8 +25,17 @@ function createProduct (req, res) {
     .catch(err => { console.error(err)})
 }
 
+function updateProduct (req, res) {
+  ProductModel
+
+    .updateOne({ _id: req.params.productId }, req.body, {new: true})
+    .then(product => res.json(product))
+    .catch(err => console.error(err))
+}
+
 module.exports = {
   viewAllProducts,
   getProduct,
-  createProduct
+  createProduct,
+  updateProduct
 }

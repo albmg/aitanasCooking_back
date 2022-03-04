@@ -21,3 +21,13 @@ Content-Type: application/json
   "ingredients": ["gofio", "azúcar", "mantequilla"],
   "createdDate": ""
 }
+
+###
+// update product
+PUT {{base_url}}/6220ece2d35877c20787b910 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "ahora soy otro mas",
+  "ingredients": ["curcuma", "pollo"]
+}
