@@ -24,8 +24,16 @@ function createMenu (req, res) {
     .catch(err => { console.error(err)})
 }
 
+function updateMenu (req, res) {
+  MenuModel
+  .updateOne({ _id: req.params.menuId }, req.body, {new: true})
+  .then(menu => res.json(menu))
+  .catch(err => console.error(err))
+}
+
 module.exports = {
   viewAllMenus,
   getMenu,
-  createMenu
+  createMenu,
+  updateMenu
 }

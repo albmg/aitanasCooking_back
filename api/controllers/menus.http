@@ -23,3 +23,18 @@ Content-Type: application/json
   "diners": 4,
   "dishes": ["papas"]
 }
+
+###
+// update menu
+PUT {{base_url}}/62221399fac3734734039803 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "actualizando menu 1",
+  "number": 1,
+  "image": "this no",
+  "description": "este es el menu 1",
+  "createdDate": "",
+  "diners": 2,
+  "dishes": ["tomate"]
+}
