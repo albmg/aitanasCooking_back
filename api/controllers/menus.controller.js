@@ -8,6 +8,14 @@ function viewAllMenus (req, res) {
     .catch(err => console.error(err))
 }
 
+function getMenu (req, res) {
+  MenuModel
+    .findById(req.params.menuId)
+    .then(response => res.json(response))
+    .catch(err => console.error(err))
+}
+
 module.exports = {
-  viewAllMenus
+  viewAllMenus,
+  getMenu
 }
