@@ -1,26 +1,33 @@
 const mongoose = require('mongoose')
 
 const orderSchema = new mongoose.Schema({
-  username: {
-    type: String
+  clientName: {
+    type: String,
+    required: [true, "Client Name is required"]
   },
   email: {
-    type: String
+    type: String,
+    required: [true, 'Email is required'],
+    lowercase: true,
+    match: [/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/, 'email not valid']
   },
   adress: {
-    type: String
+    type: String,
+    required: [true, "adress is required"]
   },
   phone: {
-    type: Number
+    type: String,
+    required: [true, 'phone is required'],
+    //match: [/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'phone not valid']
   },
-  purchasedProducts: {
+  purchasedProducts: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'product'
-  },
-  purchasedMenus: {
+  }],
+  purchasedMenus: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'menu'
-  }
+  }]
 })
 
 const orderModel = mongoose.model('order', orderSchema)
