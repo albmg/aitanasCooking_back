@@ -2,19 +2,27 @@ const mongoose = require('mongoose')
 
 const productSchema = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
+    required: [true, "Name is required"]
   },
   image: {
-    type: String
+    type: String,
+    required: [true, "Image is required"]
   },
   description: {
-    type: String
+    type: String,
+    maxlength: [325, "max character length allowed is 325"],
+    minlength: [1, "min character length allowed is 1"],
+    required: [true, "Description is required"]
   },
   ingredients: {
-    type: Array
+    type: [String],
+    required: true,
+    validate: [(value) => value.length > 0, 'No outputs'],
   },
   createdDate: {
-    type: Date
+    type: Date,
+    default: new Date()
   }
 })
 
