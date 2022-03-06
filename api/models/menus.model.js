@@ -19,9 +19,10 @@ const menuSchema = new mongoose.Schema({
   diners: {
     type: Number
   },
-  dishes: {
-    type: Array
-  }
+  dishes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'product'
+  }]
 })
 
 const menuModel = mongoose.model('menu', menuSchema)

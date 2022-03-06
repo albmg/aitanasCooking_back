@@ -6,7 +6,7 @@ GET {{base_url}}/ HTTP/1.1
 
 ###
 // get menu
-GET {{base_url}}/62221399fac3734734039803 HTTP/1.1
+GET {{base_url}}/6224ae1317e143d76a46e6ab HTTP/1.1
 
 
 ###
@@ -15,18 +15,27 @@ POST {{base_url}}/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "menu 2",
-  "number": 2,
+  "name": "prob menu 4",
+  "number": 4,
   "image": "this",
-  "description": "este es el menu 2",
+  "description": "prob menu usando ids de productos ",
   "createdDate": "",
   "diners": 4,
-  "dishes": ["papas"]
+  "dishes": ["6220e9bed35877c20787b90f", "6224bc2e1e737c87a92836f4"]
+}
+
+###
+// add dish to menu
+POST {{base_url}}/6224c4180aa1e6ae20de9731 HTTP/1.1
+Content-Type: application/json
+
+{
+  "productId": "6224bc2e1e737c87a92836f4"
 }
 
 ###
 // update menu
-PUT {{base_url}}/62221399fac3734734039803 HTTP/1.1
+PUT {{base_url}}/6224c4180aa1e6ae20de9731 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -41,4 +50,4 @@ Content-Type: application/json
 
 ###
 // delete menu
-DELETE {{base_url}}/6222182fc0a522b2ade4bd81 HTTP/1.1
+DELETE {{base_url}}/6224ba6d1e737c87a92836f2 HTTP/1.1

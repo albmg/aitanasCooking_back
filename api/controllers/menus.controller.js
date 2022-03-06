@@ -1,9 +1,11 @@
 const MenuModel = require('../models/menus.model')
+const ProductModel = require('../models/products.model')
 const mongoose = require('mongoose')
 
 function viewAllMenus (req, res) {
   MenuModel
     .find()
+    .populate('dishes')
     .then(response => res.json(response))
     .catch(err => console.error(err))
 }
@@ -11,6 +13,7 @@ function viewAllMenus (req, res) {
 function getMenu (req, res) {
   MenuModel
     .findById(req.params.menuId)
+    .populate('dishes')
     .then(response => res.json(response))
     .catch(err => console.error(err))
 }
@@ -30,6 +33,7 @@ function updateMenu (req, res) {
   .then(menu => res.json(menu))
   .catch(err => console.error(err))
 }
+
 
 function deleteMenu (req, res) {
   MenuModel
