@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const { authUser } = require('../utils')
 
 const {
   viewAllMenus,
@@ -11,7 +12,7 @@ const {
 router
   .get('/', viewAllMenus)
   .get('/:menuId', getMenu)
-  .post('/', createMenu)
+  .post('/me', authUser, createMenu)
   .put('/:menuId', updateMenu)
   .delete('/:menuId', deleteMenu)
 
