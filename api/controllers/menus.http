@@ -39,17 +39,12 @@ Content-Type: application/json
 
 ###
 // update menu
-PUT {{base_url}}/6224c4180aa1e6ae20de9731 HTTP/1.1
+PUT {{base_url}}/me/622769cca7b3322831bcabb1 HTTP/1.1
 Content-Type: application/json
+token: {{token}}
 
 {
-  "name": "actualizando menu 1",
-  "number": 1,
-  "image": "this no",
-  "description": "este es el menu 1",
-  "createdDate": "",
-  "diners": 2,
-  "dishes": ["tomate"]
+  "name": "actualizando menu 5"
 }
 
 ###

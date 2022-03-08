@@ -13,7 +13,7 @@ router
   .get('/', viewAllMenus)
   .get('/:menuId', getMenu)
   .post('/me', authUser, createMenu)
-  .put('/:menuId', updateMenu)
+  .put('/me/:menuId', updateMenu)
   .delete('/:menuId', deleteMenu)
 
   module.exports = router
