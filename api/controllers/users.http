@@ -1,0 +1,29 @@
+@base_url = http://localhost:3000/api
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWF0IjoxNjQ2NzQ3MDQ3LCJleHAiOjE2NDY3NTA2NDd9.2KAXk-Qvh73B2HzOkJ6y3wvSrl7K5unek5xrvIkTCac
+
+###
+// create an account
+POST {{base_url}}/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_username": "Alb2",
+    "user_email": "testAlb2@test.com",
+    "user_password": "123456"
+}
+
+###
+// Login
+POST {{base_url}}/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_email": "testAlb2@test.com",
+    "user_password": "123456"
+}
+
+###
+// whoami
+GET {{base_url}}/auth/me HTTP/1.1
+token:{{token}}
