@@ -14,6 +14,6 @@ router
   .get('/:menuId', getMenu)
   .post('/me', authUser, createMenu)
   .put('/me/:menuId', updateMenu)
-  .delete('/:menuId', deleteMenu)
+  .delete('/me/:menuId', deleteMenu)
 
   module.exports = router

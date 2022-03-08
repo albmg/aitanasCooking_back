@@ -49,4 +49,5 @@ token: {{token}}
 
 ###
 // delete menu
-DELETE {{base_url}}/6224ba6d1e737c87a92836f2 HTTP/1.1
+DELETE {{base_url}}/me/622769cca7b3322831bcabb1 HTTP/1.1
+token: {{token}}
