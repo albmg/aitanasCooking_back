@@ -20,6 +20,10 @@ const orderSchema = new mongoose.Schema({
     required: [true, 'phone is required'],
     //match: [/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/, 'phone not valid']
   },
+  createdDate: {
+    type: Date,
+    default: new Date()
+  },
   purchasedProducts: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'product'
