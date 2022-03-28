@@ -22,22 +22,31 @@ function login (req, res) {
     .findOne({ email: req.body.user_email })
     .select('+password')
     .then(user => {
-      if (!user) { res.json({ error: 'Your email and/or password are incorrect!' }) } else {
+      //if (!user) { res.json({ error: 'Your email and/or password are incorrect!' }) } else {
+      if (!user) { res.json({ ok: false, error: 'Your email and/or password are incorrect!' }) } else {
         if (bcrypt.compareSync(req.body.user_password, user.password)) {
-          const userData = { email: user.email }
+          const userData = { email: user.email, id: user.id }
           const token = jwt.sign(userData, process.env.SECRET, { expiresIn: '1h' })
-          res.json({ token, ...userData })
+          res.json({ ok: true, token, ...userData })
         } else {
-          res.json({ error: 'Your email and/or password are incorrect!' })
+          res.json({ ok: false, error: 'Your email and/or password are incorrect!' })
         }
       }
     })
-    .catch(error => res.status(403).json({ error: error.errmsg }))
+    //.catch(error => res.status(403).json({ error: error.errmsg }))
+    .catch(error => res.status(403).json({ ok: false, error: error.errmsg }))
 }
 
 function whoami (req, res)  {
-  res.json(res.locals.user)
-  //res.json({id: res.locals.user.toString()})
+
+  const { id, email } = res.locals.user
+
+  res.json({
+    ok: true,
+    id,
+    email
+  })
+
 }
 
 module.exports = { signup, login, whoami }

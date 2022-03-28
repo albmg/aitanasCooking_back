@@ -1,6 +1,6 @@
 @base_url = http://localhost:3000/api
 
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWF0IjoxNjQ2NzQ3MDQ3LCJleHAiOjE2NDY3NTA2NDd9.2KAXk-Qvh73B2HzOkJ6y3wvSrl7K5unek5xrvIkTCac
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWF0IjoxNjQ4Mzg1Nzk5LCJleHAiOjE2NDgzODkzOTl9.LFmc0S6SOXhT_jhFZ-Vz0ApQoFXWWfd5Mrz-XsFPtK0
 
 ###
 // create an account

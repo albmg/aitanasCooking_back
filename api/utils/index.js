@@ -4,7 +4,7 @@ const UserModel = require('../models/users.model')
 // Authenticate Middleware
 function authUser (req, res, next) {
   if (!req.headers.token) {
-    res.status(403).json({ error: 'No Token found' })
+    res.status(403).json({ ok: false, error: 'No Token found' })
   } else {
     try {
 
@@ -17,7 +17,7 @@ function authUser (req, res, next) {
           next()
         })
     } catch (error) {
-      res.status(403).json({ error: `Token not valid + ${error}` })
+      res.status(403).json({ ok: false, error: `Token not valid + ${error}` })
     }
   }
 }
