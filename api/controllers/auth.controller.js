@@ -6,15 +6,16 @@ function signup (req, res) {
   const hashedPassword = bcrypt.hashSync(req.body.user_password, 10)
   UserModel
     .create({
+      username: req.body.user_username,
       email: req.body.user_email,
       password: hashedPassword
     })
     .then(user => {
       const userData = { email: user.email }
       const token = jwt.sign(userData, process.env.SECRET)
-      res.json({ token, ...userData })
+      res.json({ ok: true, token, ...userData })
     })
-    .catch(error => res.status(403).json({ error: error }))
+    .catch(error => res.status(403).json({ ok: false, error: error }))
 }
 
 function login (req, res) {
