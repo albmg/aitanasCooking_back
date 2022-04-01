@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const { authUser } = require('../utils')
 
 const {
   viewAllProducts,
@@ -10,8 +11,8 @@ const {
 
 router
   .get('/', viewAllProducts)
-  .post('/', createProduct)
   .get('/:productId', getProduct)
+  .post('/me', authUser, createProduct)
   .put('/:productId', updateProduct)
   .delete('/:productId', deleteProduct)
 
