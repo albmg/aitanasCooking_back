@@ -23,6 +23,12 @@ const productSchema = new mongoose.Schema({
   createdDate: {
     type: Date,
     default: new Date()
+  },
+  units: {
+    type: Number
+  },
+  weight: {
+    type: Number
   }
 })
 

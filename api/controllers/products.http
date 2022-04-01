@@ -19,8 +19,10 @@ token: {{ token }}
 {
   "name": "probando nuevo",
   "image": "esta-de-aqui",
-  "description": "cuscus2",
-  "ingredients": ["cuscus2", "sal", "perejil"]
+  "description": "probando introduct unidades",
+  "ingredients": ["cuscus2", "sal", "perejil"],
+  "units": 1,
+  "weight": 200
 }
 
 ###
