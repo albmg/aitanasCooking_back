@@ -1,5 +1,5 @@
 @base_url = http://localhost:3000/api/products
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWQiOiI2MjI3NWM0NDE1YmViNjM3ZDBkYzRiN2UiLCJpYXQiOjE2NDg4MjY1NTAsImV4cCI6MTY0ODgzMDE1MH0.0BEct2nCh_u4xFFTsyzbA7bmFU0d8XABTQIv5p_f_dM
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWQiOiI2MjI3NWM0NDE1YmViNjM3ZDBkYzRiN2UiLCJpYXQiOjE2NDk1MTUxMjUsImV4cCI6MTY0OTUxODcyNX0.rqLU_xS3UnJgsJxIlSfc3olCKR2G0V_gHGUzWL-EkHQ
 
 ###
 // view all products
@@ -7,7 +7,7 @@ GET {{base_url}}/ HTTP/1.1
 
 ###
 // get a product
-GET {{base_url}}/6220e9bed35877c20787b90f HTTP/1.1
+GET {{base_url}}/624b8a122a4ded46cb08ebb8 HTTP/1.1
 
 
 ###
@@ -37,4 +37,5 @@ Content-Type: application/json
 
 ###
 // delete product
-DELETE {{base_url}}/6224f2071d9218353af79e24 HTTP/1.1
+DELETE {{base_url}}/me/6250cf49097761ab988da224 HTTP/1.1
+token: {{ token }}

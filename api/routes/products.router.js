@@ -14,6 +14,6 @@ router
   .get('/:productId', getProduct)
   .post('/me', authUser, createProduct)
   .put('/:productId', updateProduct)
-  .delete('/:productId', deleteProduct)
+  .delete('/me/:productId', authUser, deleteProduct)
 
 module.exports = router
