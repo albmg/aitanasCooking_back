@@ -13,7 +13,7 @@ router
   .get('/', viewAllProducts)
   .get('/:productId', getProduct)
   .post('/me', authUser, createProduct)
-  .put('/:productId', updateProduct)
+  .put('/me/:productId', authUser, updateProduct)
   .delete('/me/:productId', authUser, deleteProduct)
 
 module.exports = router

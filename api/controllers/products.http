@@ -1,5 +1,5 @@
 @base_url = http://localhost:3000/api/products
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWQiOiI2MjI3NWM0NDE1YmViNjM3ZDBkYzRiN2UiLCJpYXQiOjE2NDk1MTUxMjUsImV4cCI6MTY0OTUxODcyNX0.rqLU_xS3UnJgsJxIlSfc3olCKR2G0V_gHGUzWL-EkHQ
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RhbGIyQHRlc3QuY29tIiwiaWQiOiI2MjI3NWM0NDE1YmViNjM3ZDBkYzRiN2UiLCJpYXQiOjE2NDk2MTUxMDIsImV4cCI6MTY0OTYxODcwMn0.qLUmR62m5dggL7Pd0R0cHKAtzNFU3fMLO_UNFTqwowk
 
 ###
 // view all products
@@ -27,12 +27,12 @@ token: {{ token }}
 
 ###
 // update product
-PUT {{base_url}}/6220ece2d35877c20787b910 HTTP/1.1
+PUT {{base_url}}/me/6250ceb6097761ab988da21d HTTP/1.1
 Content-Type: application/json
+token: {{ token }}
 
 {
-  "name": "ahora soy otro mas",
-  "ingredients": ["curcuma", "pollo"]
+  "ingredients" : "pepe"
 }
 
 ###
