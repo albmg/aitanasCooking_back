@@ -1,5 +1,5 @@
 const MenuModel = require('../models/menus.model')
-const ProductModel = require('../models/products.model')
+//const ProductModel = require('../models/products.model')
 const mongoose = require('mongoose')
 
 function viewAllMenus (req, res) {

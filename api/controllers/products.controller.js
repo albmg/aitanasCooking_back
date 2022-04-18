@@ -19,9 +19,7 @@ function getProduct (req, res) {
 function createProduct (req, res) {
   ProductModel
     .create(req.body)
-    .then( product => {
-      res.json( product )
-    })
+    .then( product => res.json( product ))
     .catch(err => { console.error(err)})
 }
 

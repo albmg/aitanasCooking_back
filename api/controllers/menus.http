@@ -8,7 +8,7 @@ GET {{base_url}}/ HTTP/1.1
 
 ###
 // get menu
-GET {{base_url}}/6224ae1317e143d76a46e6ab HTTP/1.1
+GET {{base_url}}/62221399fac3734734039803 HTTP/1.1
 
 
 ###
