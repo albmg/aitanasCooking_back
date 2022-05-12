@@ -19,8 +19,9 @@ Content-Type: application/json
   "email": "calvoide@calvo.com",
   "adress": "avenida pepito",
   "phone": "1244211245",
-  "purchasedProducts": ["6220f012069012fa3e18a3b0", "6224f10d1d9218353af79e1a"],
-  "purchasedMenus": "62221399fac3734734039803"
+  "purchasedProducts": [],
+  "purchasedMenus": [],
+  "deliveryDate": "12/05/2022"
 }
 
 ###

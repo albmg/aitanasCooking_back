@@ -31,7 +31,14 @@ const orderSchema = new mongoose.Schema({
   purchasedMenus: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'menu'
-  }]
+  }],
+  deliveryDate: {
+    type: Date,
+    required: [true, 'deliveryDate is required']
+  },
+  deliveryTime: {
+    type: String
+  }
 })
 
 const orderModel = mongoose.model('order', orderSchema)
