@@ -38,6 +38,12 @@ const orderSchema = new mongoose.Schema({
   },
   deliveryTime: {
     type: String
+  },
+  distance: {
+    type: Number
+  },
+  duration: {
+    type: Number
   }
 })
 

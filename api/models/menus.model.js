@@ -27,6 +27,9 @@ const menuSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  price: {
+    type: Number
+  },
   dishes: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'product'
