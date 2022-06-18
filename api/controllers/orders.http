@@ -6,7 +6,7 @@ GET {{base_url}}/ HTTP/1.1
 
 ###
 // get order
-GET {{base_url}}/62222447fac3734734039804 HTTP/1.1
+GET {{base_url}}/62ad1b3c6db3ec9115a5f712 HTTP/1.1
 
 
 ###
@@ -19,9 +19,18 @@ Content-Type: application/json
   "email": "calvoide@calvo.com",
   "adress": "avenida pepito",
   "phone": "1244211245",
-  "purchasedProducts": [],
+  "purchasedProducts": [
+    {
+      "product": "6220e9bed35877c20787b90f",
+      "quantity": 2
+    },
+     {
+      "product": "6224bc2e1e737c87a92836f4",
+      "quantity": 1
+    }
+  ],
   "purchasedMenus": [],
-  "deliveryDate": "12/05/2022"
+  "deliveryDate": "12/07/2022"
 }
 
 ###

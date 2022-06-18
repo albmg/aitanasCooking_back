@@ -24,8 +24,9 @@ const productSchema = new mongoose.Schema({
     type: Date,
     default: new Date()
   },
-  units: {
-    type: Number
+  defaultUnits: {
+    type: Number,
+    default: 1
   },
   weight: {
     type: Number

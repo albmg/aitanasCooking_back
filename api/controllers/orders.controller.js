@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 function viewAllOrders (req, res) {
   OrderModel
     .find()
-    .populate('purchasedProducts')
+    .populate('purchasedProducts.productId')
     .populate('purchasedMenus')
     .then(response => res.json(response))
     .catch(err => console.error(err))
@@ -13,7 +13,7 @@ function viewAllOrders (req, res) {
 function getOrder (req, res) {
   OrderModel
     .findById(req.params.orderId)
-    .populate('purchasedProducts')
+    .populate('purchasedProducts.productId')
     .populate('purchasedMenus')
     .then(response => res.json(response))
     .catch(err => console.error(err))
@@ -23,7 +23,8 @@ function getOrder (req, res) {
 function createOrder (req, res) {
     OrderModel
       .create(req.body)
-      .then( order => {
+      .then(order => {
+        //order.cart.push()
         res.json( order )
       })
       .catch(err => { console.error(err)})
