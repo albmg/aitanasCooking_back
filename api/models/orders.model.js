@@ -34,8 +34,13 @@ const orderSchema = new mongoose.Schema({
     }
   }],
   purchasedMenus: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'menu'
+     menuId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'menu'
+    },
+    quantity: {
+      type: Number
+    }
   }],
   deliveryDate: {
     type: Date,

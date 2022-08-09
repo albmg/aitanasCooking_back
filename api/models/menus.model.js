@@ -30,6 +30,10 @@ const menuSchema = new mongoose.Schema({
   price: {
     type: Number
   },
+  defaultUnits: {
+    type: Number,
+    default: 1
+  },
   dishes: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'product'

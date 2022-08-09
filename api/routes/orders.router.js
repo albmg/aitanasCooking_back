@@ -9,10 +9,10 @@ const {
 } = require('../controllers/orders.controller')
 
 router
-  .get('/', viewAllOrders)
-  .get('/:orderId', getOrder)
+  .get('/me', viewAllOrders)
+  .get('/me/:orderId', getOrder)
   .post('/', createOrder)
-  .put('/:orderId', updateOrder)
-  .delete('/:orderId', deleteOrder)
+  .put('/me/:orderId', updateOrder)
+  .delete('/me/:orderId', deleteOrder)
 
   module.exports = router

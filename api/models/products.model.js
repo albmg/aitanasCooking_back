@@ -28,8 +28,8 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 1
   },
-  weight: {
-    type: Number
+  details: {
+    type: String
   },
   price: {
     type: Number
