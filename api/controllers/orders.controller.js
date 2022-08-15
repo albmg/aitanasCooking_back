@@ -5,7 +5,7 @@ function viewAllOrders (req, res) {
   OrderModel
     .find()
     .populate('purchasedProducts.productId')
-    .populate('purchasedMenus')
+    .populate('purchasedMenus.menuId')
     .then(response => res.json(response))
     .catch(err => console.error(err))
 }
@@ -14,7 +14,7 @@ function getOrder (req, res) {
   OrderModel
     .findById(req.params.orderId)
     .populate('purchasedProducts.productId')
-    .populate('purchasedMenus')
+    .populate('purchasedMenus.menuId')
     .then(response => res.json(response))
     .catch(err => console.error(err))
 }
